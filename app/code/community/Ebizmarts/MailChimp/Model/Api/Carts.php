@@ -490,11 +490,11 @@ class Ebizmarts_MailChimp_Model_Api_Carts
      *
      * @param $cartId
      * @param $mailchimpStoreId
-     * @param null             $syncDelta
-     * @param null             $syncError
-     * @param int              $syncModified
-     * @param null             $syncDeleted
-     * @param null             $token
+     * @param string|null $syncDelta
+     * @param int|null    $syncError
+     * @param int|null    $syncModified
+     * @param int|null    $syncDeleted
+     * @param string|null $token
      */
     protected function _updateSyncData($cartId, $mailchimpStoreId, $syncDelta = null, $syncError = null, $syncModified = 0, $syncDeleted = null, $token = null)
     {

@@ -132,17 +132,6 @@
                     </ecommercesyncdata>
                 </entities>
             </mailchimp_mysql4>
-            <newsletter>
-                <rewrite>
-                    <subscriber>Ebizmarts_MailChimp_Model_Subscriber</subscriber>
-                </rewrite>
-            </newsletter>
-            <core>
-                <rewrite>
-                    <email_template>Ebizmarts_MailChimp_Model_Email_Template</email_template>
-                    <email_queue>Ebizmarts_MailChimp_Model_Email_Queue</email_queue>
-                </rewrite>
-            </core>
         </models>
         <resources>
             <mailchimp_setup>
