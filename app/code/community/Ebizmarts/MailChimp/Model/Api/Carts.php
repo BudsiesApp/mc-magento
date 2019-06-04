@@ -162,10 +162,10 @@ class Ebizmarts_MailChimp_Model_Api_Carts
             }
 
             // avoid carts abandoned as guests when customer email associated to a registered customer.
-            if (!$cart->getCustomerId() && $customer->getEmail()==$cart->getCustomerEmail()) {
+            /*if (!$cart->getCustomerId() && $customer->getEmail()==$cart->getCustomerEmail()) {
                 $this->_updateSyncData($cartId, $mailchimpStoreId, Varien_Date::now());
                 continue;
-            }
+            }*/
 
             // send the products that not already sent
             $allCarts = $this->addProductNotSentData($mailchimpStoreId, $magentoStoreId, $cart, $allCarts);
