@@ -237,6 +237,10 @@ class Ebizmarts_MailChimp
     }
     public function call($url,$params,$method=Ebizmarts_MailChimp::GET,$encodeJson=true)
     {
+        if (!is_array($params)) {
+            $params = [];
+        }
+
         if (count($params) && $encodeJson && $method!=Ebizmarts_MailChimp::GET) {
             $params = json_encode($params);
         }
