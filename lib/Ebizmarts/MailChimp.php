@@ -241,15 +241,16 @@ class Ebizmarts_MailChimp
             $params = [];
         }
 
-        if (count($params) && $encodeJson && $method!=Ebizmarts_MailChimp::GET) {
-            $params = json_encode($params);
-        }
-
         $ch = $this->_ch;
-        if (count($params)&&$method!=Ebizmarts_MailChimp::GET) {
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
-        } else {
-            if (count($params)) {
+
+        if ($params) {
+            if ($method!=Ebizmarts_MailChimp::GET) {
+                if ($encodeJson) {
+                    $params = json_encode($params);
+                }
+
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+            } else {
                 $_params = http_build_query($params);
                 $url .= '?' . $_params;
             }
